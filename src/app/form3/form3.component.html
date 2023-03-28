@@ -1,0 +1,34 @@
+<form>
+    <label for="city">Select City:</label>
+    <select name="city" id="city" [(ngModel)]="selectedCity">
+      <option value="">-- Select City --</option>
+      <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+    </select>
+    <br>
+    <button type="button" (click)="onSubmit()">Submit</button>
+  </form>
+
+
+
+
+  
+<!-- <form class="form-container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="formData.email">
+    </div>
+    <div class="form-group">
+        <label for="state">State:</label>
+      <select id="state" [(ngModel)]="formData.state">
+        <option value="">--Select a state--</option>
+        <option value="Punjab">Punjab</option>
+        <option value="Italy">Italy</option>
+        <option value="Nigeria">Nigeria</option>
+      </select>
+    </div>
+  </form>
+  -->

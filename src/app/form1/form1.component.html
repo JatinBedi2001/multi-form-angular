@@ -1,0 +1,37 @@
+<div class="form-wrapper">
+    <form>
+      <label for="country">Select Country:</label>
+      <select name="country" id="country" [(ngModel)]="selectedCountry">
+        <option value="">-- Select Country --</option>
+        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+      </select>
+    </form>
+    <hr>
+    <app-form2 [selectedCountry]="selectedCountry" (stateChanged)="onStateChanged($event)"></app-form2>
+    <hr>
+    <app-form3 [selectedState]="selectedState" [selectedCountry]="selectedCountry"></app-form3>
+    </div>
+
+
+
+<!-- <form class="form-container">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" [(ngModel)]="formData.name">
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="formData.email">
+    </div>
+    <div class="form-group">
+      <label for="continent">Continent:</label>
+      <select id="continent" [(ngModel)]="formData.continent">
+        <option value="">--Select a continent--</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Africa">Africa</option>
+      </select>
+    </div>
+  </form>
+   -->
+
