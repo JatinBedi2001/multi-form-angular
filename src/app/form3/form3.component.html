@@ -1,9 +1,23 @@
 <form>
+    <label for="city">Select State:</label>
+    <select name="city" id="city" [(ngModel)]="selectedCity">
+      <option value="">-- Select City --</option>
+      <ng-container *ngIf="cities.length > 0; else noCities">
+        <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
+      </ng-container>
+      <ng-template #noCities>
+        <option disabled selected>-- No cities available --</option>
+      </ng-template>
+    </select>
+    <button type="button" (click)="onSubmit()">Submit</button>
+  </form> 
+
+
+  <!-- <form>
     <label for="city">Select City:</label>
     <select name="city" id="city" [(ngModel)]="selectedCity">
       <option value="">-- Select City --</option>
       <option *ngFor="let city of cities" [value]="city">{{ city }}</option>
     </select>
-    <br>
     <button type="button" (click)="onSubmit()">Submit</button>
-  </form>
+  </form> -->
