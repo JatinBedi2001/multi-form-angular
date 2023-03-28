@@ -7,7 +7,6 @@ import { AppComponent } from './app.component';
 import { Form1Component } from './form1/form1.component';
 import { Form2Component } from './form2/form2.component';
 import { Form3Component } from './form3/form3.component';
-import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,6 @@ import { LoginComponent } from './login/login.component';
     Form1Component,
     Form2Component,
     Form3Component,
-    LoginComponent,
   ],
   imports: [
     BrowserModule,
