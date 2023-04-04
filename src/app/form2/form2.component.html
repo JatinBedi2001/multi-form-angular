@@ -1,15 +1,16 @@
 <form>
-    <label for="state">Select State:</label>
-    <select name="state" id="state" [(ngModel)]="selectedState" (change)="stateChanged.emit($event)">
-      <option value="">-- Select State --</option>
-      <ng-container *ngIf="states.length > 0; else noStates">
-        <option *ngFor="let state of states" [value]="state">{{ state }}</option>
-      </ng-container>
-      <ng-template #noStates>
-        <option disabled selected>-- No states available --</option>
-      </ng-template>
-    </select>
-  </form> 
+  <label for="state">Select State:</label>
+  <select name="state" id="state" [(ngModel)]="selectedState" (change)="stateChanged.emit($event)">
+    <option value="">-- Select State --</option>
+    <ng-container *ngIf="states.length > 0; else noStates">
+      <option *ngFor="let state of states" [value]="state">{{ state }}</option>
+    </ng-container>
+    <ng-template #noStates>
+      <option disabled selected>-- No states available --</option>
+    </ng-template>
+  </select>
+</form> 
+
 
   <!-- <form>
     <label for="state">Select State:</label>

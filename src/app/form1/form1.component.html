@@ -1,9 +1,9 @@
 <div class="form-wrapper">
-    <form>
-      <label for="country">Select Country:</label>
-      <select name="country" id="country" [(ngModel)]="selectedCountry">
-        <option value="">-- Select Country --</option>
-        <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
-      </select>
-    </form>
-    </div>
+  <form>
+    <label for="country">Select Country:</label>
+    <select name="country" id="country" [(ngModel)]="selectedCountry">
+      <option value="">-- Select Country --</option>
+      <option *ngFor="let country of countries" [value]="country">{{ country }}</option>
+    </select>
+  </form>
+  </div>
